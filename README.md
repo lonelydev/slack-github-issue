@@ -1,4 +1,4 @@
-# Blank Template
+# Slack app to create Github Issues
 
 This is actually a follow along of the [GitHub Issue](https://api.slack.com/tutorials/tracks/create-github-issues-in-workflows) 
 slack app tutorial. This was created from the [blank template](#clone-the-template) using Slack CLI.
