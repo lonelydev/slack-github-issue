@@ -12,7 +12,7 @@ import ReactionCreateNewIssueWorkflow from "../workflows/reaction_create_new_iss
  * This is expected to be stored as the app is configured.
  */
 function getChannelIds(): string[] {
-  return [];
+  return ["C06TPNJ88H4"];
 }
 
 /**
@@ -30,26 +30,15 @@ function getChannelIds(): string[] {
 const reactionCreateNewIssueTrigger: Trigger<
   typeof ReactionCreateNewIssueWorkflow.definition
 > = {
-  type: TriggerTypes.Event,
   name: "Reactji added",
+  type: TriggerTypes.Event,
   workflow:
     `#/workflows/${ReactionCreateNewIssueWorkflow.definition.callback_id}`,
   description: "a reaction was added to a message",
   event: {
     event_type: TriggerEventTypes.ReactionAdded,
-    channel_ids: getChannelIds(),
-    filter: {
-      version: 1,
-      root: {
-        statement: "{{ data.reaction }} == eyes",
-      },
-    },
+    channel_ids: ["C06TPNJ88H4"],
   },
-  /**
-   * The following inputs object should match the
-   * input_parameters expected by the Workflow being triggered.
-   * This is found in the WorkflowDefinition.
-   */
   inputs: {
     userId: {
       value: TriggerContextData.Event.ReactionAdded.user_id,

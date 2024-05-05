@@ -3,6 +3,8 @@ import CreateIssueDefinition from "./definition.ts";
 import Logger from "https://deno.land/x/logger@v1.1.5/logger.ts";
 
 /**
+ * The mod.ts filename is a convention to declare the entry point
+ * to your function in functions/create_issue.
  * https://docs.github.com/en/rest/issues/issues?apiVersion=2022-11-28#create-an-issue
  */
 

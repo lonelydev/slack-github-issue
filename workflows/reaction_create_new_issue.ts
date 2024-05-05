@@ -16,4 +16,16 @@ const ReactionCreateNewIssueWorkflow = DefineWorkflow({
   },
 });
 
+/**
+ * send a message to the channel to show that someone reacted.
+ */
+ReactionCreateNewIssueWorkflow.addStep(
+  Schema.slack.functions.SendMessage,
+  {
+    channel_id: ReactionCreateNewIssueWorkflow.inputs.channelId,
+    message:
+      `Reaction ${ReactionCreateNewIssueWorkflow.inputs.reaction} detected.`,
+  },
+);
+
 export default ReactionCreateNewIssueWorkflow;

@@ -38,6 +38,20 @@ I modified the README.md to match the instructions in the slack tutorial where p
 
 ---
 
+## Status as of today
+
+So I tried creating a simple reaction trigger on top of the original shortcut workflow which works fine today.
+
+The reaction trigger consistently failed every time stating `invalid_statement` as an error. I'm unable to find much help to proceed on slack documentation. I have tried some variations of the event trigger's filter to make this work. However, that has not changed anything.
+
+I feel like I am spending way too much time trying to figure this out. So I'm going to park this here.
+
+| Trigger | Function | Workflow |
+| ------- | -------- | -------- |
+| [[`reaction_create_new_issue.ts`](/triggers/reaction_create_new_issue.ts) | NA | [`reaction_create_new_issue.ts`](/workflows/reaction_create_new_issue.ts) |
+
+The project was created by following [Github Issues Tutorial](https://api.slack.com/tutorials/tracks/create-github-issues-in-workflows) on Slack Developer portal.
+
 ## Setup
 
 Before getting started, first make sure you have a development workspace where
